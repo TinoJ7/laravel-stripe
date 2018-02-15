@@ -27,7 +27,7 @@ class HomeController extends Controller
         $faker = Faker::create();
 
         // For generating random amount between $1 to $100
-        $amount = $faker->randomFloat($nbMaxDecimals = 2, $min = 100, $max = 10000);
+        $amount = $faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 100);
 
         return view('home', compact('amount'));
     }

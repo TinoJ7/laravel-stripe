@@ -27,12 +27,12 @@
                             class="btn btn-success"
                             value="Pay with Card"
                             data-key="{{ env('STRIPE_PUB_KEY') }}"
-                            data-amount="{{ $amount }}"
+                            data-amount="{{ $amount * 100}}"
                             data-currency="usd"
                             data-locale="auto"
                             data-name="Laravel Stripe"
                             data-description="Stripe random amount payment"
-                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-image="https://raw.githubusercontent.com/TinoJ7/laravel-stripe/master/public/assets/laravel-logo.png"
                         />
                     </form>
                 </div>
