@@ -21,13 +21,13 @@
 
                     <form action="/charge" method="POST">
                         @csrf
-                        <input type="hidden" name="amount" value="{{ $amount * 100 }}">
+                        <input type="hidden" name="amount" value="{{ $amount }}">
                         <input 
                             type="submit"
                             class="btn btn-success"
                             value="Pay with Card"
                             data-key="{{ env('STRIPE_PUB_KEY') }}"
-                            data-amount="{{ $amount * 100}}"
+                            data-amount="{{ $amount }}"
                             data-currency="usd"
                             data-locale="auto"
                             data-name="Laravel Stripe"
