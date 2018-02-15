@@ -14,8 +14,9 @@ class CreatePaymentsTable extends Migration
     public function up()
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->string('id')->unique();
+            $table->increments('id');
             $table->unsignedInteger('user_id');
+            $table->string('stripe_payment_id')->unique();
             $table->integer('amount')->comment('in cents');;
             $table->boolean('status')->default(0)->comment('0 - fail, 1 - success');
             $table->text('failure_reason')->nullable();

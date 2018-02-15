@@ -45,7 +45,7 @@ class CheckoutController extends Controller
 
     		// For storing payment information
     		$storePayment = Payment::create([
-    			'id' => $charge->id,
+    			'stripe_payment_id' => $charge->id,
     			'user_id' => auth()->user()->id,
     			'amount' => $charge->amount,
     			'status' => 1
@@ -59,7 +59,7 @@ class CheckoutController extends Controller
     		
     		// For storing payment information
     		$storePayment = Payment::create([
-    			'id' => $error['charge'],
+    			'stripe_payment_id' => $error['charge'],
     			'user_id' => auth()->user()->id,
     			'amount' => $request->amount,
     			'status' => 0,
