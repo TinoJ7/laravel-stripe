@@ -21,13 +21,13 @@ Choose an email from the seeded user data. By default 5 users are generated usin
 password
 ```
 
-For testing a successful payment use the following card number with a future expiry date and cvv.
+For testing a successful payment, use the following card number with a future expiry date and cvv.
 
 ```php
 4242 4242 4242 4242
 ```
 
-For testing a successful payment use the following card number with a future expiry date and cvv.
+For testing a failure payment, use the following card number with a future expiry date and cvv.
 
 ```php
 4000 0000 0000 0341
